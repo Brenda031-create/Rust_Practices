@@ -54,5 +54,15 @@ fn main() {
 //ownership practice
     let s1 = String::from("Hello");
     let s2 = s1; //s1 is moved to s2, s1 is no longer valid
-    println!("{}", s2);
+    println!("s2: {}", s2);
+
+    let s3 = String::from("Hello");
+    let s4 = &s3; //s3 is borrowed by s4, s3 is still valid
+    println!("s4: {}", s4);
+    println!("s3: {}", s3);
+
+    let s5 = String::from("Hello");
+    let s6 = s5.clone(); //s5 is cloned to s6, s5 is still valid
+    println!("s5: {}", s5);
+    println!("s6: {}", s6);
 }
