@@ -14,4 +14,16 @@ fn main() {
     } else {
         println!("The number is greater than 50");
 }
+
+//nested if else practice
+    let number = 210;
+    if number > 100{
+      if number > 200 {
+        println!("The number is huge");
+      }else {
+        println!("The number is big");
+      } 
+    } else {
+        println!("The number is small");
+    }
 }
