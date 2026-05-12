@@ -138,4 +138,15 @@ let emp = Employee {
 let numbers: Vec<i32> = vec![1, 2, 3];
 let letters: Vec<char> = vec!['a', 'b'];
 let clicks:Vec<Mouse> = vec![Mouse::Left, Mouse::Right];
+//enums revisit
+enum PromoDiscount {
+    NewUser,
+    Holiday(String),
+}
+enum Discount {
+    Percent(f64),
+    Flat(i32),
+    Promo(PromoDiscount),
+    Custom(String),
+}
 }
