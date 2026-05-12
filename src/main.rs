@@ -65,4 +65,21 @@ fn main() {
     let s6 = s5.clone(); //s5 is cloned to s6, s5 is still valid
     println!("s5: {}", s5);
     println!("s6: {}", s6);
+
+    //ownership practice from the video
+    enum Light {
+        Bright,
+        Dull,
+    }
+    fn display_light(light: Light) {
+        match light {
+            Light::Bright => println!("The light is bright"),
+            Light::Dull => println!("The light is dull"),
+        }
+    }
+    fn main() {
+        let dull = Light::Dull;
+        display_light(dull); //dull is moved to display_light, dull is no longer valid
+        display_light(dull); //error: use of moved value: `dull`
+    }
 }
