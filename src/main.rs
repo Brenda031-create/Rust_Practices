@@ -137,7 +137,7 @@ let emp = Employee {
 //type annotation practice
 let numbers: Vec<i32> = vec![1, 2, 3];
 let letters: Vec<char> = vec!['a', 'b'];
-let clicks:Vec<Mouse> = vec![Mouse::Left, Mouse::Right];
+//let clicks:Vec<Mouse> = vec![Mouse::Left, Mouse::Right];
 //enums revisit
 enum PromoDiscount {
     NewUser,
@@ -148,5 +148,22 @@ enum Discount {
     Flat(i32),
     Promo(PromoDiscount),
     Custom(String),
+}
+//Data options practice
+struct Custmer {
+    age:Option<u32>,
+    email:String,
+}
+let mark = Custmer {
+    age: Some(22),
+    email: "mark@example.com".to_owned(),
+};
+let becky = Custmer {
+    age: None,
+    email: "becky@example.com".to_owned(),
+};
+match becky.age {
+    Some(age) => println!("Becky's age is {}", age),
+    None => println!("Becky's age is not provided"),
 }
 }
