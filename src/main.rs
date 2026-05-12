@@ -94,11 +94,11 @@ fn main() {
             Light::Dull => println!("The light is dull"),
         }
     }
-    fn main() {
+    
         let dull = Light::Dull;
         display_light(&dull); //dull is borrowed by display_light, dull is still valid
         display_light(&dull); //dull is borrowed by display_light, dull is still valid
-    }
+    
     //vector practice
    /* let my_numbers = vec![1, 2, 3];
     let mut my_numbers = vec::new();
@@ -108,10 +108,27 @@ fn main() {
     my_numbers.pop();
     my_numbers.len();
     let two = my_numbers[1];*/
-    let mut my_numbers = Vec![1, 2, 3];
-    for num in my_numbers.iter() {
-        println!("{:?}", num);
-        
-    }
+   // let mut my_numbers = Vec![1, 2, 3];
+    //for num in my_numbers.iter() {
+      //  println!("{:?}", num);
 
+    //}
+// string and &str practice
+fn print_it(data: &str) {
+    println!("{:?}", data);
+}
+print_it("a string slice");
+let ownned_string = "owned string".to_owned();//makes the string owned by the variable, it can be modified and passed to functions that take ownership
+let another_owned = String::from("another");
+print_it(&ownned_string);
+print_it(&another_owned);
+
+//will not work
+struct Employee {
+    name: &str,
+}
+let emp_name = "Jayson";
+let emp = Employee {
+    name: emp_name
+};
 }
