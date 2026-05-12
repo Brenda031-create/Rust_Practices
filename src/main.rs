@@ -99,4 +99,19 @@ fn main() {
         display_light(&dull); //dull is borrowed by display_light, dull is still valid
         display_light(&dull); //dull is borrowed by display_light, dull is still valid
     }
+    //vector practice
+   /* let my_numbers = vec![1, 2, 3];
+    let mut my_numbers = vec::new();
+    my_numbers.push(1);
+    my_numbers.push(2);
+    my_numbers.push(3);
+    my_numbers.pop();
+    my_numbers.len();
+    let two = my_numbers[1];*/
+    let mut my_numbers = Vec![1, 2, 3];
+    for num in my_numbers.iter() {
+        println!("{:?}", num);
+        
+    }
+
 }
