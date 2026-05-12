@@ -67,7 +67,7 @@ fn main() {
     println!("s6: {}", s6);
 
     //ownership practice from the video
-    enum Light {
+    /* enum Light {
         Bright,
         Dull,
     }
@@ -81,5 +81,22 @@ fn main() {
         let dull = Light::Dull;
         display_light(dull); //dull is moved to display_light, dull is no longer valid
         display_light(dull); //error: use of moved value: `dull`
+    }*/
+
+//ownership 2 borrwing practice
+    enum Light {
+        Bright,
+        Dull,
+    }
+    fn display_light(light: &Light) {
+        match light {
+            Light::Bright => println!("The light is bright"),
+            Light::Dull => println!("The light is dull"),
+        }
+    }
+    fn main() {
+        let dull = Light::Dull;
+        display_light(&dull); //dull is borrowed by display_light, dull is still valid
+        display_light(&dull); //dull is borrowed by display_light, dull is still valid
     }
 }
