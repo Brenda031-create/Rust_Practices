@@ -134,4 +134,8 @@ let emp_name = String::from("Jayson");
 let emp = Employee {
     name: emp_name
 };
+//type annotation practice
+let numbers: Vec<i32> = vec![1, 2, 3];
+let letters: Vec<char> = vec!['a', 'b'];
+let clicks:Vec<Mouse> = vec![Mouse::Left, Mouse::Right];
 }
