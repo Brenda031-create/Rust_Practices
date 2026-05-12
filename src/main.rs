@@ -125,9 +125,12 @@ print_it(&another_owned);
 
 //will not work
 struct Employee {
-    name: &str,
+    //name: &str,
+    name: String,
 }
-let emp_name = "Jayson";
+//let emp_name = "Jayson";
+let emp_name = "Jayson".to_owned();
+let emp_name = String::from("Jayson");
 let emp = Employee {
     name: emp_name
 };
